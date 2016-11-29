@@ -1,12 +1,12 @@
 package demo
 
 func islandPerimeter(grid [][]int) int {
-	var oneCount int
+	var landCount int
 	var duplicatedEdgeCount int
 	for row, v := range grid {
 		for column, e := range v {
 			if e == 1 {
-				oneCount++
+				landCount++
 				if row != 0 {
 					if grid[row-1][column] == 1 {
 						duplicatedEdgeCount++
@@ -20,5 +20,5 @@ func islandPerimeter(grid [][]int) int {
 			}
 		}
 	}
-	return oneCount*4 - 2*duplicatedEdgeCount
+	return landCount*4 - 2*duplicatedEdgeCount
 }
