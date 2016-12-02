@@ -1,6 +1,5 @@
 package demo
 
-//leaf is a treeNode who's parent has only one child node
 func minDepth(root *TreeNode) int {
 	if root == nil {
 		return 0

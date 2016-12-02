@@ -22,6 +22,16 @@ func Test_minDepth(t *testing.T) {
 			},
 			Right: &TreeNode{},
 		}}, 2},
+
+		{"normal", args{&TreeNode{Val: 1,
+			Left: &TreeNode{Val: 2,
+				Right: &TreeNode{},
+				Left:  &TreeNode{},
+			},
+			Right: &TreeNode{
+				Left: &TreeNode{},
+			},
+		}}, 3},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
