@@ -2,17 +2,17 @@ package demo
 
 // found no direct rule to solve this problem but as obviously as the information has provided
 func isHappy(n int) bool {
-	unHappyNum := make([]bool, 11)
-	unHappyNum[1], unHappyNum[7], unHappyNum[10] = true, true, true
+	happyNum := make([]bool, 11)
+	happyNum[1], happyNum[7], happyNum[10] = true, true, true
 
-	if n < 10 {
-		return unHappyNum[n]
+	if n < 11 {
+		return happyNum[n]
 	}
 	processedNum := make(map[int]bool)
 	processedNum[n] = true
 	for {
 		if n < 11 {
-			return unHappyNum[n]
+			return happyNum[n]
 
 		}
 		tmp := n
