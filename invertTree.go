@@ -1,9 +1,5 @@
 package demo
 
-func newTreeNode(val int) *TreeNode {
-	return &TreeNode{Val: val, Left: nil, Right: nil}
-}
-
 func newTreeNodeChilds(val int, l, r *TreeNode) *TreeNode {
 	return &TreeNode{Val: val, Left: l, Right: r}
 }
