@@ -9,3 +9,7 @@ type TreeNode struct {
 func newTreeNode(val int) *TreeNode {
 	return &TreeNode{Val: val, Left: nil, Right: nil}
 }
+
+func newTreeNodewithChilds(val int, r, l *TreeNode) *TreeNode {
+	return &TreeNode{Val: val, Left: l, Right: r}
+}
