@@ -1,10 +1,5 @@
 package demo
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func ReverseList(head *ListNode) *ListNode {
 	var pre, cur, backup *ListNode
 	cur = head
