@@ -82,6 +82,10 @@ func newTreeNode(val int) *TreeNode {
 	return &TreeNode{Val: val, Left: nil, Right: nil}
 }
 
+func newTreeNodes(val int, left, right *TreeNode) *TreeNode {
+	return newTreeNodewithChilds(val, right, left)
+}
+
 func newTreeNodewithChilds(val int, r, l *TreeNode) *TreeNode {
 	return &TreeNode{Val: val, Left: l, Right: r}
 }
