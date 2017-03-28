@@ -11,6 +11,19 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type Trie struct {
+	//use pointer which will allocate on heap in case this trie is large; operate on stack is faster but size of content can be a risk exceeding
+	chartsForSearching map[byte]*Trie
+	oneWordHere        bool
+}
+
+func NewTrie() *Trie {
+	return &Trie{
+		chartsForSearching: make(map[byte]*Trie, 26),
+		oneWordHere:        false,
+	}
+}
+
 func (ln *ListNode) ToArray() []int {
 	var data []int
 	head := ln
