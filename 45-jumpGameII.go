@@ -34,3 +34,28 @@ func jump(num []int) int {
 	}
 	return count
 }
+
+func jump2(num []int) int {
+	numLen := len(num)
+	target := numLen - 1
+	if target == 0 {
+		return 0
+	}
+	var maxCanreach, reach, count int
+	for i := 0; i < numLen; i++ {
+		canReach := num[i] + i
+		if canReach >= target {
+			break
+		}
+		if reach < canReach {
+			reach = canReach
+		}
+
+		if i >= maxCanreach {
+			maxCanreach = reach
+			count++
+		}
+	}
+	count++
+	return count
+}
