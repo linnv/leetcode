@@ -32,7 +32,6 @@ func jump(num []int) int {
 		}
 		count++
 	}
-	return count
 }
 
 func jump2(num []int) int {
