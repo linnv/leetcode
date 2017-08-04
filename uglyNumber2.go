@@ -14,7 +14,7 @@ func getMinimalThree(two, three, five int) int {
 	return two
 }
 
-//Multiply a ugly number by a ugly number is aslo ugly,so we can get the minimal number from xNum*{2,3,5}(xNum is the moving index of ugly array,each basic{2,3,5} ugly number has its own moving index)
+//Multiply a ugly number by a ugly number is also ugly,so we can get the minimal number from xNum*{2,3,5}(xNum is the moving index of ugly array,each basic{2,3,5} ugly number has its own moving index)
 func nthUglyNumber(n int) int {
 	uglySlice := make([]int, 1, 1+n)
 	uglySlice[0] = 1
